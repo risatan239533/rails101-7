@@ -46,7 +46,7 @@ end
   private
 
   def find_group_and_check_permission
-    @gorup = Group.find(params[:id])
+    @group = Group.find(params[:id])
 
     if current_user != @group.user
       redirect_to root_path, alert: "You have no permission."
